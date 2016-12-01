@@ -1,0 +1,27 @@
+From b42178c1438a99c80526eed20a18bce6bbc0df47 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Thu, 1 Dec 2016 18:50:28 +0000
+Subject: [PATCH] Add Makefile with install target
+
+Allow autospec to run make and make install
+---
+ Makefile | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Makefile
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..a386591
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,7 @@
++bindir ?= /usr/bin/
++
++all: ;
++
++install:
++	mkdir -p $(DESTDIR)/$(bindir)
++	cp stack $(DESTDIR)/$(bindir)/stack
+-- 
+2.10.2
+
