@@ -4,7 +4,7 @@
 #
 Name     : stack
 Version  : 1.2.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/commercialhaskell/stack/releases/download/v1.2.0/stack-1.2.0-linux-x86_64.tar.gz
 Source0  : https://github.com/commercialhaskell/stack/releases/download/v1.2.0/stack-1.2.0-linux-x86_64.tar.gz
 Summary  : No detailed summary available
