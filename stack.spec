@@ -6,7 +6,7 @@
 #
 Name     : stack
 Version  : 1.6.3
-Release  : 5
+Release  : 6
 URL      : https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz
 Source0  : https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz
 Source99 : https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz.asc
