@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x575159689BEFB442 (dev@fpcomplete.com)
 #
 Name     : stack
-Version  : 1.6.3
-Release  : 6
-URL      : https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz
-Source0  : https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz
-Source99 : https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz.asc
+Version  : 1.7.1
+Release  : 7
+URL      : https://github.com/commercialhaskell/stack/releases/download/v1.7.1/stack-1.7.1-linux-x86_64.tar.gz
+Source0  : https://github.com/commercialhaskell/stack/releases/download/v1.7.1/stack-1.7.1-linux-x86_64.tar.gz
+Source99 : https://github.com/commercialhaskell/stack/releases/download/v1.7.1/stack-1.7.1-linux-x86_64.tar.gz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -31,7 +31,7 @@ bin components for the stack package.
 
 
 %prep
-%setup -q -n stack-1.6.3-linux-x86_64
+%setup -q -n stack-1.7.1-linux-x86_64
 %patch1 -p1
 
 %build
@@ -39,11 +39,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1514933227
+export SOURCE_DATE_EPOCH=1525224146
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1514933227
+export SOURCE_DATE_EPOCH=1525224146
 rm -rf %{buildroot}
 %make_install
 
