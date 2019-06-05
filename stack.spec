@@ -6,7 +6,7 @@
 #
 Name     : stack
 Version  : 1.9.3
-Release  : 10
+Release  : 11
 URL      : https://github.com/commercialhaskell/stack/releases/download/v1.9.3/stack-1.9.3-linux-x86_64.tar.gz
 Source0  : https://github.com/commercialhaskell/stack/releases/download/v1.9.3/stack-1.9.3-linux-x86_64.tar.gz
 Source99 : https://github.com/commercialhaskell/stack/releases/download/v1.9.3/stack-1.9.3-linux-x86_64.tar.gz.asc
