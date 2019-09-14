@@ -6,7 +6,7 @@
 #
 Name     : stack
 Version  : 2.1.3
-Release  : 12
+Release  : 13
 URL      : https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz
 Source0  : https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz
 Source1 : https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz.asc
