@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x65101FF31C5C154D (emanuel@borsboom.io)
 #
 Name     : stack
-Version  : 2.1.3
-Release  : 13
-URL      : https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz
-Source0  : https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz
-Source1 : https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64.tar.gz.asc
+Version  : 2.3.3
+Release  : 14
+URL      : https://github.com/commercialhaskell/stack/releases/download/v2.3.3/stack-2.3.3-linux-x86_64.tar.gz
+Source0  : https://github.com/commercialhaskell/stack/releases/download/v2.3.3/stack-2.3.3-linux-x86_64.tar.gz
+Source1  : https://github.com/commercialhaskell/stack/releases/download/v2.3.3/stack-2.3.3-linux-x86_64.tar.gz.asc
 Summary  : The Haskell Tool Stack
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -39,7 +39,8 @@ license components for the stack package.
 
 
 %prep
-%setup -q -n stack-2.1.3-linux-x86_64
+%setup -q -n stack-2.3.3-linux-x86_64
+cd %{_builddir}/stack-2.3.3-linux-x86_64
 %patch1 -p1
 
 %build
@@ -47,23 +48,23 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568049032
+export SOURCE_DATE_EPOCH=1602135459
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1568049032
+export SOURCE_DATE_EPOCH=1602135459
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/stack
-cp LICENSE %{buildroot}/usr/share/package-licenses/stack/LICENSE
+cp %{_builddir}/stack-2.3.3-linux-x86_64/LICENSE %{buildroot}/usr/share/package-licenses/stack/797ba6ea3225deb97d45d30ee546df0cb3e949d4
 %make_install
 
 %files
@@ -75,4 +76,4 @@ cp LICENSE %{buildroot}/usr/share/package-licenses/stack/LICENSE
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/stack/LICENSE
+/usr/share/package-licenses/stack/797ba6ea3225deb97d45d30ee546df0cb3e949d4
