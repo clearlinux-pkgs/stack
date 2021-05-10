@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x575159689BEFB442 (dev@fpcomplete.com)
 #
 Name     : stack
-Version  : 2.5.1
-Release  : 15
-URL      : https://github.com/commercialhaskell/stack/releases/download/v2.5.1/stack-2.5.1-linux-x86_64.tar.gz
-Source0  : https://github.com/commercialhaskell/stack/releases/download/v2.5.1/stack-2.5.1-linux-x86_64.tar.gz
-Source1  : https://github.com/commercialhaskell/stack/releases/download/v2.5.1/stack-2.5.1-linux-x86_64.tar.gz.asc
+Version  : 2.7.1
+Release  : 16
+URL      : https://github.com/commercialhaskell/stack/releases/download/v2.7.1/stack-2.7.1-linux-x86_64.tar.gz
+Source0  : https://github.com/commercialhaskell/stack/releases/download/v2.7.1/stack-2.7.1-linux-x86_64.tar.gz
+Source1  : https://github.com/commercialhaskell/stack/releases/download/v2.7.1/stack-2.7.1-linux-x86_64.tar.gz.asc
 Summary  : The Haskell Tool Stack
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -39,8 +39,8 @@ license components for the stack package.
 
 
 %prep
-%setup -q -n stack-2.5.1-linux-x86_64
-cd %{_builddir}/stack-2.5.1-linux-x86_64
+%setup -q -n stack-2.7.1-linux-x86_64
+cd %{_builddir}/stack-2.7.1-linux-x86_64
 %patch1 -p1
 
 %build
@@ -48,7 +48,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1602784032
+export SOURCE_DATE_EPOCH=1620669724
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -61,10 +61,10 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1602784032
+export SOURCE_DATE_EPOCH=1620669724
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/stack
-cp %{_builddir}/stack-2.5.1-linux-x86_64/LICENSE %{buildroot}/usr/share/package-licenses/stack/797ba6ea3225deb97d45d30ee546df0cb3e949d4
+cp %{_builddir}/stack-2.7.1-linux-x86_64/LICENSE %{buildroot}/usr/share/package-licenses/stack/1bb0fa2552ebbc0d49251146f4f31ef0567ad345
 %make_install
 
 %files
@@ -76,4 +76,4 @@ cp %{_builddir}/stack-2.5.1-linux-x86_64/LICENSE %{buildroot}/usr/share/package-
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/stack/797ba6ea3225deb97d45d30ee546df0cb3e949d4
+/usr/share/package-licenses/stack/1bb0fa2552ebbc0d49251146f4f31ef0567ad345
